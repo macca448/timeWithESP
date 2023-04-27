@@ -37,9 +37,8 @@
 #define TZ_INFO "NZST-12NZDT,M9.5.0,M4.1.0/3" // Timezone string 
 const char* ntpServer = "pool.ntp.org";       // All that's needed to connect to NTP server pools
 
-#include "private.h"
-//const char* ssid       = "Your_ssid";
-//const char* password   = "Your_password";
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
 
 uint8_t count = 0, syncMin, lastSec;          // A few variables for time tasks
 
