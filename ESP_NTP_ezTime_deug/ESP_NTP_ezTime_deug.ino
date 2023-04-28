@@ -18,10 +18,8 @@
 
 Timezone myTZ;                    //Creates our Timezone object to get "Local Time"
 
-//const char* ssid       = "Your_ssid";
-//const char* password   = "Your_password";
-#include "private.h"              //Holds my const char[] ssid & password 
-
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
 
 int lastSec, count = 0;
 
