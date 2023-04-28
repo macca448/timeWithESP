@@ -34,9 +34,9 @@ The `time.h` library looks at the current controllers constant running clocks an
 ###  What's in the Examples 
 
 ####  ESP_time_32
-    1. On boot start WiFi and sync to localtime() and do a detailed tmelents time stamp
-    2. Disconnect from WiFi and run a simpler tmelements time stamp every second
-    3. After 5 minutes do a `NTP` sync routine
+1. On boot start WiFi and sync to localtime() and do a detailed tmelents time stamp
+2. Disconnect from WiFi and run a simpler tmelements time stamp every second
+3. After 5 minutes do a `NTP` sync routine
 
 #### time_timelib_ntp sketch
 
