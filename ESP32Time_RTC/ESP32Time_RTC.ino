@@ -17,15 +17,15 @@
  */
 
 #define TZ_INFO "NZST-12NZDT,M9.5.0,M4.1.0/3"       //NZST/NZDT  UTC +12/+13       
-#include "private.h"                                //SSID and Password
+
 #include <WiFi.h>
 #include <ESP32Time.h>                              //Clock Linrary
 
 ESP32Time rtc;                                      //Clock object
 time_t now;                                         //So we use the ESP32 time functions
 
-//const char* ssid       = "Your_ssid";
-//const char* password   = "Your_password";
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
                            
 const int32_t DEFAULT_TIME = 1609459200;            //1st Jan 2021 00:00:00
 uint8_t syncHour, lastSec, lastMin;                 //For main loop timing statements
