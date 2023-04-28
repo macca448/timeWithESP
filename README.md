@@ -21,7 +21,6 @@ The `time.h` library looks at the current controllers constant running clocks an
 #### Sketch's in this archive
 
 | SKETCH                | Description                                                                                               | Chip     | Time Libraries Used |
-|-----------------------|-----------------------------------------------------------------------------------------------------------|:--------:|-------------------------|
 |                       |                                                                                                           |          |                         |
 | ESP_time_32           | The simplest form of keeping time with the `C#` time library using `tmelements_t`                         | Both     | `time.h`                |
 | time_timelib_ntp      | Converts `tmelements` to `local time epoch` so we can use `uint8_t` time variables anywhere in the sketch | Both     | `time.h` `TimeLib.h`    |
