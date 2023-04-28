@@ -90,6 +90,7 @@ void getLocalTime(void){                 //Function statement to get tm elements
 void doWiFi(void){
   delay(200);
   Serial.printf("\n Connecting to %s ", ssid);
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);                       //connect to WiFi
   while (WiFi.status() != WL_CONNECTED) {
       delay(250);
