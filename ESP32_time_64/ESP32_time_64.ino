@@ -25,10 +25,8 @@
 #include <WiFi.h>    
 time_t now;                                         //ESP32 64bit epoch
 
-
-#include "private.h"                                //SSID and Password
-//const char* ssid       = "Your_ssid";
-//const char* password   = "Your_password";
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
 
 const int64_t DEFAULT_TIME = 1609459200;  //1st Jan 2021 00:00:00                           
 uint8_t lastSec, lastMin, count;         
