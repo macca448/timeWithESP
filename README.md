@@ -3,7 +3,7 @@
 Some Example Sketch's showing a few different methods to keep time using your system's clock to produce Human Readable Local Time.
 1. All testing was done using Arduino IDE v1.8.19 using ESP32 v2.0.8 and ESP8266 v3.1.2 board profiles
 2. All sketch's produce local time with Daylight offset if your time zone supports it
-3. All example sketch's use the clock that is created to do main loop clock 
+3. All example sketch's use the clock that is created to do all time based tasks
 4. The `time.h` library should be installed by default and any other library mentioned can be installed via the Arduino IDE
 5. Every Sketch by default requires WiFi functionality
 6. The generic sketchs should actually work on any network aware Arduino controller
