@@ -12,12 +12,16 @@
 
 #include <ezTime.h>               //Library to use our system clock for NTP time
 Timezone myTZ;                    //Creates our Timezone object to get "Local Time"
-#include "private.h"              //Holds my const char[] ssid & password 
+
 #if defined (ESP32)               //Lets the compiler work with
     #include <WiFi.h>             //ESP32
 #elif defined (ESP8266)           //or
     #include <ESP8266WiFi.h>      //ESP8266 without changing any script
 #endif
+
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
+
 int lastSec;
 
 void getTheTime(bool simple){
