@@ -17,7 +17,10 @@
  * Under normal use NTP time updates would only be needed a few times a day or even once a day
  * 
  * See https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv for Timezone codes for your region
- * 
+ *  
+ * Date  : 28th April 2023
+ * Author: macca448@gmail.com
+ * Github: https://github.com/macca448/timeWithESP
  */
 
 #if defined (ESP32)                           // Auto detect ESP Chip type
