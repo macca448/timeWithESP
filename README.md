@@ -9,6 +9,7 @@ Some Example Sketch's showing a few different methods to keep time using your sy
 6. The generic sketchs should actually work on any network aware Arduino controller
 7. Link for `Olson` Timezone names for the `ezTime` library [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 8. Link for `POSIX` Timezone string database [here ](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv)
+9. All sketch's run a serial monitor clock to the second
 
 ![POSIX explained](https://github.com/macca448/timeWithESP/blob/main/assets/posix_detail.jpg)
 
@@ -68,7 +69,7 @@ The `time.h` library looks at the current controllers constant running clocks an
 2. Re-sync every 60 seconds as an example
 
 ###  ESP32_time_64
-1. Sets the ESP32 clock using the internal time library (int64_t epoch)making it very lightweight
+1. Sets the ESP32 clock using the internal time library (int64_t epoch)
 2. Detailed "tmelenents" time stamp on NTP sync then WiFi disconnects
 3. Uses a simple minute count to enable NTP resync
 
