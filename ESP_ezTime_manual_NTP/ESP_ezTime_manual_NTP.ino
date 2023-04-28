@@ -32,9 +32,8 @@ Timezone myTZ;                                      //Creates our Timezone objec
     #include <ESP8266WiFi.h>      //ESP8266 without changing any script
 #endif
 
-#include "private.h"                                //Holds my const char[] ssid & password 
-//const char* ssid       = "Your_ssid";
-//const char* password   = "Your_password";
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
 
 uint8_t lastSec, lastMin;
 
