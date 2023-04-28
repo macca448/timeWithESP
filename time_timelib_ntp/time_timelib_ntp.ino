@@ -23,9 +23,10 @@
  * Github: https://github.com/macca448/timeWithESP
  */
 
+#define DEFAULT_TIME 1609459200L          //Epoch for 1st Jan 2021 00:00:00
+
 #if defined (ESP32)                           // Auto detect ESP Chip type
     #include <WiFi.h>
-    #define DEFAULT_TIME 1609459200L          //Epoch for 1st Jan 2021 00:00:00
 #elif defined (ESP8266)
     #include <ESP8266WiFi.h>    
 #endif
@@ -61,19 +62,12 @@ void getLocalTime(void){                 //Function statement to get tm elements
     time_t now = time(nullptr); 
     struct tm *now_tm;
     now = time(NULL);
-    #if defined (ESP8266)                   //NTP Sync method for ESP8266
-        while(now_tm != localtime(&now)){
-            now_tm = localtime(&now);
-            delay(500);                     //Small delay needed or we miss the packet
-        }
-    #elif defined (ESP32)                   //NTP Sync method for ESP32
-        int32_t t = 0;
-        while(t < DEFAULT_TIME){            //It needs a different wait iteration method
-          now_tm = localtime(&now);
-          t = time(&now);
-          delay(500);
-        }        
-    #endif
+     int32_t t = 0;
+    while(t < DEFAULT_TIME || now_tm != localtime(&now)){ 
+        now_tm = localtime(&now);
+        t = time(&now);                   //This needs to be true to continue
+        delay(1000);                       //Small delay needed or we may miss the packet
+    }         
     sc = now_tm->tm_sec;
     mn = now_tm->tm_min;
     hr = now_tm->tm_hour;
