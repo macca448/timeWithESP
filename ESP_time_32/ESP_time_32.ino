@@ -35,9 +35,8 @@
 time_t now;                         // this is the epoch
 tm now_tm;                            // the structure tm holds time information in a more convenient way
 
-#include "private.h"                                //SSID and Password
-//const char* ssid       = "Your_ssid";
-//const char* password   = "Your_password";
+const char* ssid       = "Your_ssid";
+const char* password   = "Your_password";
 
 const int32_t DEFAULT_TIME = 1609459200;  //1st Jan 2021 00:00:00                           
 uint8_t lastSec, lastMin, count;         
