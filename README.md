@@ -20,8 +20,8 @@ The `time.h` library looks at the current controllers constant running clocks an
 
 #### Sketch's in this archive
 
-| SKETCH                | Description                                                                                               | Chip     | Time Libraries Used |
-|                       |                                                                                                           |          |                         |
+| SKETCH                | Description                                                                                               | Chip     | Time Libraries Used     |
+|-----------------------|-----------------------------------------------------------------------------------------------------------|----------|-------------------------|
 | ESP_time_32           | The simplest form of keeping time with the `C#` time library using `tmelements_t`                         | Both     | `time.h`                |
 | time_timelib_ntp      | Converts `tmelements` to `local time epoch` so we can use `uint8_t` time variables anywhere in the sketch | Both     | `time.h` `TimeLib.h`    |
 | ESP_NTP_ezTime        | Let's `ezTime` do the heavy lifting for NTP re-sync                                                       | Both     | `ezTime.h`              |
@@ -29,6 +29,7 @@ The `time.h` library looks at the current controllers constant running clocks an
 | ESP_ezTime_manual_NTP | Using the `ezTime` library and manually doing your NTP update schedule                                    | Both     | `ezTime.h`              |
 | ESP32_time_64         | Takes advantage of the `time` functionality that is now native to the `ESP32 WiFi` library                | ESP32    |                         |
 | ESP32Time_RTC         | Easy to use library `ESP32Time` that offers flexible sketch time functions                                | ESP32    | `ESP32Time.h`           |
+
 
 ###  What's in the Examples 
 
