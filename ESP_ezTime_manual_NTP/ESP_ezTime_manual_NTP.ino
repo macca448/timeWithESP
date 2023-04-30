@@ -56,9 +56,7 @@ void doNTP(void){
         delay(300);
     }
     Serial.println("\n Now Conected to WiFi and getting Time Update\n");
-    setInterval(0);
     waitForSync();
-    getTheTime(0);
     Serial.println("NTP Update Sucess " + myTZ.dateTime() + "\n");
     WiFi.disconnect(true);
     WiFi.mode(WIFI_OFF);
@@ -75,7 +73,7 @@ void setup() {
 }
 
 void loop() {
-    events();
+
     if(lastMin != myTZ.minute()){
         doNTP();
     }
