@@ -16,7 +16,7 @@ Some Example Sketch's showing a few different methods to keep time using your sy
 #### The basics of how time is created on your controller
 Our controllers and hardware RTC modules have ossicilators that are used to create constant time periods and these are used to create the `millis()` and `micros()` functions in our Arduino sketch's. 
 
-The `time.h` library looks at the current controllers constant running clocks and sync's it to the `Unix Epoch` that you pass to it. That means when you do an `NTP` time sync the `time.h` library does a calculation to convert the `Epoch` value which you pass being seconds since `January 1st, 1970 at 00:00:00 UTC` then calculates how to make your current `millis()` value into a human readable clock for both time and date. If you use `Timezone` and `localtime()` then you will also not only get true local time but your clock will be aware of `Daylight`   time offset changes.
+The `time.h` library looks at the current controllers constant running clocks and sync's it to the `Unix Epoch` that you pass to it. That means when you do an `NTP` time sync the `time.h` library does a calculation to convert the `Epoch` value which you pass being seconds since `January 1st, 1970 at 00:00:00 UTC` and then calculates how to make your current `millis()` value into a human readable clock for both time and date. Using `Posix` and `Olsen` `Timezone` identifier's with the `localtime()` function converts the UTC time to your local time including `Daylight Savings Time (DST)` changes if your zone supports it.
 
 #### Sketch's in this archive
 
